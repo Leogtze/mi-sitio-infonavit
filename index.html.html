@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulta Trámite por Oficio</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    .top-links {
+      background-color: #f6f7f9;
+      padding: 8px 30px;
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .top-links a {
+      color: #444;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .mid-header {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo-tabs {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo-tabs img {
+      height: 40px;
+    }
+
+    .logo-tabs a {
+      color: #555;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .logo-tabs a.active {
+      color: #002f87;
+      border-bottom: 3px solid #002f87;
+      padding-bottom: 4px;
+    }
+
+    .mid-header a.btn {
+      background-color: #002f87;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .main-menu {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      gap: 30px;
+    }
+
+    .main-menu a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .portada {
+      position: relative;
+      background-image: url('https://portalmx.infonavit.org.mx/wps/wcm/connect/672d4a72-52f4-467d-b522-61178b0920ce/fondo-constancia-fiscal-pc.jpg?MOD=AJPERES&ContentCache=NONE&CACHE=NONE&CACHEID=ROOTWORKSPACE-672d4a72-52f4-467d-b522-61178b0920ce-pq3822o');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .semitransp-dark {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .portada-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .main {
+      background-color: white;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #002f87;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .floating-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .floating-buttons div {
+      width: 48px;
+      height: 48px;
+      background-color: #002f87;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .floating-buttons img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-links">
+    <a href="#">Aliados Estratégicos</a>
+    <a href="#">Cuentas Claras Transparencia</a>
+    <a href="#">Protección de datos personales</a>
+    <a href="#">Contáctanos</a>
+  </div>
+
+  <div class="mid-header">
+    <div class="logo-tabs">
+      <img src="logo-infonavit-nav.png" alt="Infonavit" />
+      <a href="#">Derechohabientes</a>
+      <a href="#" class="active">Patrones</a>
+      <a href="#">El Instituto</a>
+    </div>
+    <a href="#" class="btn">Acceder a Portal Empresarial</a>
+  </div>
+
+  <div class="main-menu">
+    <a href="#">Afiliación y movimientos</a>
+    <a href="#">Beneficios</a>
+    <a href="#">Mis obligaciones</a>
+    <a href="#">Tengo adeudos</a>
+    <a href="#">Trámites adicionales</a>
+    <a href="#">Centro de ayuda</a>
+  </div>
+
+  <section class="portada">
+    <div class="semitransp-dark"></div>
+    <div class="portada-text">Constancia de situación fiscal</div>
+  </section>
+
+  <div class="main">
+    <h2>Bienvenido</h2>
+    <p>
+      En esta sección podrá consultar la situación actual de los trámites realizados mediante oficio ante el Instituto del Fondo Nacional de la Vivienda para los Trabajadores (Infonavit).
+    </p>
+  </div>
+
+  <div class="main" style="text-align:left;">
+    <h3>Datos de identificación del documento</h3>
+    <p><strong>Número de oficio:</strong> 0000831723/2025</p>
+    <p><strong>Fecha de oficio:</strong> 26/05/2025</p>
+    <p><strong>Fecha fin de vigencia:</strong> 25/06/2025</p>
+    <p><strong>Estatus cumplimiento:</strong> Sin adeudo</p>
+    <p><strong>Bimestre:</strong> 2501</p>
+    <hr>
+    <h3>Datos de identificación del aportante</h3>
+    <p><strong>RFC:</strong> SRL2207251D3</p>
+    <p><strong>Nombre o Razón Social:</strong> <strong>SERVICIO, REFACCIÓN, LOGÍSTICA Y TRANSPORTES ABBA SA DE CV</strong></p>
+    <p><strong>Total NRP:</strong> 1</p>
+    <p><strong>Total trabajadores:</strong> 35</p>
+    <div style="text-align:center; margin-top: 20px;">
+      <button>Salir</button>
+    </div>
+  </div>
+
+  <section style="background-color: #f8f9fb; padding: 60px 20px;">
+    <div style="max-width: 800px; margin: auto; text-align: center;">
+      <h2 style="color: #111; font-weight: bold; margin-bottom: 40px;">Preguntas frecuentes</h2>
+      <div style="text-align: left; font-size: 16px;">
+        <p style="border-bottom: 1px solid #ccc; padding: 10px 0;">
+          <span style="color: #002f87; font-weight: bold; margin-right: 10px;">&#x2795;</span>
+          <a href="#" style="color: #002f87; text-decoration: none;">¿Cómo puedo obtener mi Constancia de situación fiscal si aún no tengo un NRP asociado?</a>
+        </p>
+        <p style="border-bottom: 1px solid #ccc; padding: 10px 0;">
+          <span style="color: #002f87; font-weight: bold; margin-right: 10px;">&#x2795;</span>
+          <a href="#" style="color: #002f87; text-decoration: none;">¿Qué debo hacer si tengo problemas para obtener mi Constancia de situación fiscal?</a>
+        </p>
+        <p style="padding: 10px 0;">
+          <span style="color: #002f87; font-weight: bold; margin-right: 10px;">&#x2795;</span>
+          <a href="#" style="color: #002f87; text-decoration: none;">Si mi Constancia de situación fiscal es negativa, ¿qué puedo hacer?</a>
+        </p>
+      </div>
+      <div style="margin-top: 40px;">
+        <a href="#" style="display: inline-block; background-color: #002f87; color: white; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-decoration: none;">Ir al centro de ayuda</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background-color: #fff; padding: 40px 20px 20px; border-top: 1px solid #ccc; font-size: 14px;">
+    <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 30px;">
+      <div style="flex: 1; min-width: 200px;">
+        <p><a href="#" style="color: #002f87; text-decoration: underline;">Síguenos</a></p>
+        <img src="icono-corazon.png" alt="Corazón" style="width: 30px; margin-bottom: 10px;"><br>
+        <p style="color: #666;">Descarga la aplicación</p>
+        <img src="icono-playstore.png" alt="Play Store" style="width: 24px; margin-right: 10px;">
+        <img src="icono-apple.png" alt="App Store" style="width: 24px; margin-right: 10px;">
+        <img src="icono-huawei.png" alt="AppGallery" style="width: 24px;">
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <p style="color: #888; font-weight: bold;">Infonatel</p>
+        <p style="color: #002f87; font-size: 20px; margin: 0;">55 9171 5050</p>
+        <p style="margin: 0;">Ciudad de México</p><br>
+        <p style="color: #002f87; font-size: 20px; margin: 0;">800 008 3900</p>
+        <p style="margin: 0;">Desde cualquier parte del país</p>
+      </div>
+      <div style="flex: 1; min-width: 250px; text-align: center;">
+        <a href="#" style="display: inline-block; background-color: #002f87; color: white; padding: 12px 25px; border-radius: 30px; font-weight: bold; text-decoration: none;">Infonavit Fácil</a><br><br>
+        <img src="banner-transparencia-1.png" alt="Transparencia 1" style="max-width: 100px; margin: 5px;">
+        <img src="banner-transparencia-2.png" alt="Transparencia 2" style="max-width: 100px; margin: 5px;">
+      </div>
+    </div>
+    <hr style="margin: 40px 0 20px;">
+    <div style="max-width: 1100px; margin: auto; text-align: center; font-size: 13px;">
+      <p style="margin: 0;">Derechos reservados © Infonavit 2017</p>
+      <p style="margin: 5px 0;"><a href="#" style="color: #444; text-decoration: underline;">Términos y condiciones</a></p>
+    </div>
+  </footer>
+
+  <div class="floating-buttons">
+    <div><img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" alt="Soporte"></div>
+    <div><img src="https://cdn-icons-png.flaticon.com/512/456/456115.png" alt="Feedback"></div>
+  </div>
+
+</body>
+</html>
